@@ -3,16 +3,8 @@ const prisma = new PrismaClient();
 
 async function main() {
   try {
-      const res = await prisma.youtube_channels.findMany(
-          {
-              where: { 
-                  subscribers: {
-                      gt: 517
-                  }
-              }
-          }
-      );
-      console.log(res);
+    const res = await prisma.youtube_channels.findMany();
+    console.log(res);
   } catch (err) {
     console.log(err);
   } finally {
@@ -23,3 +15,5 @@ async function main() {
 }
 
 main();
+
+// npx ts-node src/read.ts // Following is the command to run execute the read operation

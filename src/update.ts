@@ -7,11 +7,11 @@ async function main() {
 
     const res = await prisma.youtube_channels.update({
       where: {
-        id: 9
+        id: 2,
       },
       data: {
-        name: 'New channel name',
-        subscribers: 2000
+        name: 'New Name',
+        subscribers: 200000,
       },
     });
 
